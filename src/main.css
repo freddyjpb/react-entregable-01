@@ -1,0 +1,108 @@
+/*=============================================================================================*/
+/* F U E N T E S
+/*=============================================================================================*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+/*=============================================================================================*/
+/* R O O T
+/*=============================================================================================*/
+:root {
+    --aquamarine: #34B0BE;
+    --gray:       #D1CECA;
+    --black:      #242635;
+    --white:      #FFFFFF;
+}
+
+/*=============================================================================================*/
+/* S E L E C T O R   U N I V E R S A L
+/*=============================================================================================*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--black);
+    padding: 16px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+}
+
+h1 {
+    font-size: 50px;
+    font-style: normal;
+    font-weight: bold;
+}
+
+h2 {
+  font-size: 16px;
+  font-style:normal;
+  font-weight:bold;
+}
+
+h3 {
+  font-size: 16px;
+  font-style:italic;
+  font-weight:bold;    
+}
+
+.h1-autoresize { font-size: calc(50px + (80 - 50) * ((100vw - 320px) / (1128 - 320))); }
+.h2-autoresize { font-size: calc(16px + (32 - 16) * ((100vw - 320px) / (1128 - 320))); }
+.h3-autoresize { font-size: calc(16px + (32 - 16) * ((100vw - 320px) / (1128 - 320))); }
+
+.quote-box {
+  background-color: #fff;
+  max-width: 1096px;
+  padding: 16px;
+  border-radius: 10px;
+  display: flex; flex-direction: column; 
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  margin: 0 auto;
+}
+
+.quote-box-1 {
+  display: flex; flex-direction: row;
+  justify-content: center; align-items: flex-start;
+  gap: 16px;
+}
+
+.quote-box-2 {
+  margin-top: 24px;
+  gap: 16px;
+  display: flex; flex-direction: column;
+  justify-content:end; align-items: flex-end;
+}
+  
+.button-change {
+  width: 20vw; height: 20vw;
+  max-width: 90px; max-height: 90px;
+  border: none;
+  border-radius: 50%;
+  font-size: 10vw;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*=============================================================================================*/
+/* M E D I A    Q U E R Y S
+/*=============================================================================================*/
+@media screen and ( min-width: 450px ){
+  .button-change {
+    font-size: 45px;
+  }
+}
+
+@media screen and ( min-width: 1128px ){
+  .h1-autoresize { font-size: 80px; }
+  .h2-autoresize { font-size: 32px; }
+  .h3-autoresize { font-size: 32px; }
+}
