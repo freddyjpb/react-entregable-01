@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
 import quotes from '../quotes.json';
-//import colors from '../colors.json';
+import colors from '../colors.json';
 
 const QuoteBox = () => {
   //console.log( quotes );
   //console.log( colors );
 
-  const colors = [
-    "#845EC2",
-    "#D65DB1",
-    "#FF6F91",
-    "#FF9671",
-    "#FFC75F",
-    "#F9F871"
-  ];
+  //const colors = [
+  //  "#845EC2",
+  //  "#D65DB1",
+  //  "#FF6F91",
+  //  "#FF9671",
+  //  "#FFC75F",
+  //  "#F9F871"
+  //];
 
   const randomQuote = Math.floor( Math.random() * quotes.length );
   const randomColor = Math.floor( Math.random() * colors.length );
@@ -25,11 +25,11 @@ const QuoteBox = () => {
     setIndexQuote(newRandomQuote);
   };
 
-  document.body.style = `background: ${colors[randomColor]}`;
+  document.body.style = `background: ${colors[randomColor].hex}`;
 
 return (
 
-  <div className="quote-box" style={{ color: colors[randomColor] }}>
+  <div className="quote-box" style={{ color: colors[randomColor].hex }}>
     <div className="quote-box-1">
       <h1 className="h1-autoresize">
         <i className='bx bxs-quote-left'></i>
@@ -40,7 +40,7 @@ return (
       <h3 className='h3-autoresize'>
         {quotes[randomQuote].author}
       </h3>
-      <button className='button-change' onClick={ changeQuote } style={{ backgroundColor: colors[randomColor] }}>»</button>
+      <button className='button-change' onClick={ changeQuote } style={{ backgroundColor: colors[randomColor].hex }}>»</button>
     </div>
   </div>
 
